@@ -1,6 +1,7 @@
 package com.miapp.backend.entity;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
 
 @Entity
@@ -15,6 +16,7 @@ public class Estado {
     @Column(name = "nombreestado", nullable = false, length = 200)
     private String nombreEstado;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "estado")
     private List<Municipio> municipios;
 
