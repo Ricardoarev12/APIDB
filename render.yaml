@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: museos-api
+    env: docker
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        value: jdbc:postgresql://ep-floral-scene-a4k4w7qq-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require
+      - key: DATABASE_USERNAME
+        value: neondb_owner
+      - key: DATABASE_PASSWORD
+        value: npg_6mo7IuaBgVRh

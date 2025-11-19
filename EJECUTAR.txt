@@ -3,16 +3,31 @@
 ## Requisitos
 - Java 21
 - Maven
+- Docker (opcional)
 
 ## Compilar y ejecutar
 
-### Opción 1: Maven Wrapper (si está incluido)
-./mvnw clean install
-./mvnw spring-boot:run
-
-### Opción 2: Maven
+### Opción 1: Maven
 mvn clean install
 mvn spring-boot:run
+
+### Opción 2: Docker
+docker build -t museos-api .
+docker run -p 8080:8080 museos-api
+
+### Opción 3: Render.com
+1. Crear cuenta en Render.com
+2. Conectar repositorio Git
+3. Seleccionar "New Web Service"
+4. Configurar:
+   - Environment: Docker
+   - Build Command: (automático con Dockerfile)
+   - Start Command: (automático con Dockerfile)
+5. Variables de entorno (opcional):
+   - DATABASE_URL
+   - DATABASE_USERNAME
+   - DATABASE_PASSWORD
+   - PORT (Render lo configura automáticamente)
 
 ## URL Base
 http://localhost:8080
