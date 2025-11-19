@@ -1,0 +1,32 @@
+# INSTRUCCIONES DE EJECUCIÓN
+
+## Requisitos
+- Java 21
+- Maven
+
+## Compilar y ejecutar
+
+### Opción 1: Maven Wrapper (si está incluido)
+./mvnw clean install
+./mvnw spring-boot:run
+
+### Opción 2: Maven
+mvn clean install
+mvn spring-boot:run
+
+## URL Base
+http://localhost:8080
+
+## Endpoints principales
+- GET    /estados
+- GET    /municipios
+- GET    /municipios/estado/{idEstado}
+- GET    /tipos-museo
+- GET    /museos
+- GET    /museos?nombre={nombre}
+- POST   /museos
+- PUT    /museos/{id}
+- DELETE /museos/{id}
+- POST   /usuarios/login
+
+Ver archivo PETICIONES.md para ejemplos completos.
